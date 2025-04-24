@@ -1,0 +1,486 @@
+/* Загальні стилі оформлення сторінки  base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+	}
+main, section, article {
+  padding-top: 180px; /* відступ після  Хеадера щоб не наїжало на  тіло сайта  */
+}
+/* Стилі header */
+header {
+  position: fixed; /* Фіксує хедер у верхній частині сторінки */
+  top: 0; /* Розташовує хедер на самому верху */
+  left: 0; /* Розташовує хедер від самого лівого краю */
+  width: 100%; /* Розтягує хедер на всю ширину вікна */
+  z-index: 1000; /* Забезпечує, щоб хедер був поверх усіх інших елементів */
+
+  display: flex; /* Встановлює flex-контейнер для вирівнювання вмісту */
+  align-items: center; /* Вирівнює елементи по вертикалі по центру */
+  gap: 85px; /* Відстань між логотипом і текстом */
+  padding: 20px; /* Внутрішній відступ по всьому периметру */
+
+  /* Градієнтне тло хедера */
+  background: #0059b3;
+  background: -webkit-linear-gradient(to bottom, #0059b3 0%, #2171e3 100%);
+  background: -moz-linear-gradient(to bottom, #0059b3 0%, #2171e3 100%);
+  background: linear-gradient(to bottom, #0059b3 0%, #2171e3 100%);
+
+  height: 170px; /* Висота хедера */
+
+  text-align: center; /* Вирівнювання тексту по центру (на випадок, якщо треба) */
+  font-weight: bold; /* Жирний шрифт */
+  color: white; /* Колір тексту — білий */
+
+  /* Тінь для тексту: додає ефекти глибини й світіння */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+  font-size: 60px; /* Розмір шрифту заголовку */
+	 /* Тінь для всього блоку хедера */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* тіло сайта */
+/* Контейнер для колонок */
+picture {
+	  display: flex;
+  align-items: stretch;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ⬅️ Тінь */
+  border-radius: 8px; /* Необов'язково: згладжені кути */
+  margin: 5px auto;  /* Відступи навколо */
+  max-width: auto;  /* Ширина для центрування */
+  background-color: white; /* Білий фон під тінню */
+  display: flex; /* розміщує елементи в ряд */
+  align-items: stretch; /* обидві колонки будуть однакової висоти */
+}
+section {
+	  display: flex;
+  align-items: stretch;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ⬅️ Тінь */
+  border-radius: 8px; /* Необов'язково: згладжені кути */
+  margin: 5px auto;  /* Відступи навколо */
+  max-width: auto;  /* Ширина для центрування */
+  background-color: white; /* Білий фон під тінню */
+  display: flex; /* розміщує елементи в ряд */
+  align-items: stretch; /* обидві колонки будуть однакової висоти */
+}
+
+/* Бокове меню */
+nav {
+  width: 16%;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 15px auto;
+  background-color: #e6f2ff;
+
+  /* Центрування вмісту */
+  text-align: center;         /* Центрує текст */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Центрує дочірні елементи */
+}
+
+/* Основна частина */
+article {
+  width: 75%;
+	padding: 35px;
+  background-color: #b3d9ff;
+ box-sizing: border-box; /* включає padding у ширину */
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* ⬅️ Тінь */
+  border-radius: 8px; /* Необов'язково: згладжені кути */
+  margin: 15px auto;  /* Відступи навколо */
+  max-width: auto;  /* Ширина для центрування */
+  background-color: #b3d9ff; /* Білий фон під тінню */
+}
+
+/* Для адаптивності */
+@media (max-width: 600px) {
+  section {
+    flex-direction: column; /* на маленьких екранах — в колонку */
+  }
+
+  nav, article {
+    width: 100%;
+  }
+}
+
+/* Адаптивний макет - дві колонки / блока вкладаються один в один, а не поруч, на маленьких екранах */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* кінець тіла сайта */
+
+/* Стиль footer */
+footer {
+   /* Градієнтне тло футера */
+  background: #0059b3;
+  background: -webkit-linear-gradient(to bottom, #0059b3 0%, #2171e3 100%);
+  background: -moz-linear-gradient(to bottom, #0059b3 0%, #2171e3 100%);
+  background: linear-gradient(to bottom, #0059b3 0%, #2171e3 100%);
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Заголовки статті  */
+.at-postheader
+{
+  text-align: center;
+  color: #092761;
+  text-shadow: 0px 3px 3px #555;
+  margin: 5px 0;
+  line-height: 2em;
+  font-size: 40px;
+}
+/* Заголовок статті кінець */
+/*кнопки  початок*/
+
+/*малюнки в кружочку початок*/
+.imgholder{
+	position:relative;
+	width:126px;
+	height:126px;
+	border-radius:100px;
+	float:left;
+	margin:40px 42px;
+}
+/* thumbnails style */
+.imgholder img{
+	position:absolute;
+	left:0;
+	top:0;
+	width:104px;
+	height:104px;
+	z-index:5;
+	border-radius:100px;
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
+	opacity:0.3;
+	filter: alpha(opacity = 30);
+	box-shadow:0 0 5px #000;
+	-moz-box-shadow:0 0 5px #000;
+	-webkit-box-shadow:0 0 5px #000;
+
+	transform: scale(0.5,0.5);
+	-ms-transform: scale(0.5,0.5);
+	-moz-transform: scale(0.5,0.5);
+	-webkit-transform: scale(0.5,0.5);
+
+	transition:
+		opacity 1s,
+		transform 1s ease-in-out 0.3s;
+	-moz-transition:
+		opacity 1s,
+		-moz-transform 1s ease-in-out 0.3s;
+	-webkit-transition:
+		opacity 1s,
+		-webkit-transform 1s ease-in-out 0.3s;
+}
+.imgholder:hover img{
+	opacity:1;
+	filter: alpha(opacity = 100);
+	transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+}
+
+.imgholder figcaption{
+	position:absolute;
+	left:-15px;
+	top:40%;
+	width:130px;
+	 text-align: center;
+	color:#004E87;
+	font-weight:bold;
+	text-shadow:-1px -1px 0 #fff;
+	z-index:4;
+
+	transition:
+		top 0.5s ease-out;
+	-moz-transition:
+		top 0.5s ease-out;
+	-webkit-transition:
+		top 0.5s ease-out;
+}
+.imgholder:hover figcaption{
+	top:120%;
+}
+/* decorations style */
+.imgholder .circle{
+	position:absolute;
+	border-radius:100px;
+	-moz-border-radius:100px;
+	-webkit-border-radius:100px;
+}
+.imgholder .outer1{
+	top:-8px;
+	left:-8px;
+	width:120px;
+	height:120px;
+	z-index:2;
+
+	border:8px solid;
+	border-color:#DEEBFC;
+	box-shadow:0 0 3px #AFD3FF;
+	-moz-ox-shadow:0 0 3px #AFD3FF;
+	-webkit-box-shadow:0 0 3px #AFD3FF;
+
+	background: #ffffff;
+	background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #e2efff 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#e2efff));
+	background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#e2efff 100%);
+	background: -o-radial-gradient(center, ellipse cover, #ffffff 0%,#e2efff 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #ffffff 0%,#e2efff 100%);
+	background: radial-gradient(center, ellipse cover, #ffffff 0%,#e2efff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e2efff',GradientType=1 );
+
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+
+	transition:
+		transform 1.8s ease-in-out,
+		box-shadow 1s ease-out,
+		border-color 1.5s;
+	-moz-transition:
+		-moz-transform 1.8s ease-in-out,
+		-moz-box-shadow 1s ease-out,
+		border-color 1.5s;
+	-webkit-transition:
+		-webkit-transform 1.8s ease-in-out,
+		-webkit-box-shadow 1s ease-out,
+		border-color 1.5s;
+}
+.imgholder:hover .outer1{
+	border-color:#0088EA #7FC9FF #0088EA #7FC9FF;
+	box-shadow:0 0 10px #0285E2;
+	-moz-box-shadow:0 0 10px #0285E2;
+	-webkit-box-shadow:0 0 10px #0285E2;
+	transform:rotate(-10deg);
+	-ms-transform:rotate(-10deg);
+	-moz-transform:rotate(-10deg);
+	-webkit-transform:rotate(-10deg);
+}
+.imgholder .outer2{
+	top:-18px;
+	left:-18px;
+	width:140px;
+	height:140px;
+	z-index:1;
+
+	border:10px solid;
+	border-color: #D6E5FC #9BC8FF #D6E5FC #9BC8FF;
+	box-shadow:0 0 20px #8EB9FF;
+	-moz-box-shadow:0 0 20px #8EB9FF;
+	-webkit-box-shadow:0 0 20px #8EB9FF;
+	opacity:0;
+	filter: alpha(opacity = 0);
+
+	transform: scale(1.3,1.3) rotate(180deg);
+	-ms-transform: scale(1.3,1.3) rotate(180deg);
+	-moz-transform: scale(1.3,1.3) rotate(180deg);
+	-webkit-transform: scale(1.3,1.3) rotate(180deg);
+
+	transition:
+		opacity 0.5s,
+		transform 0.7s ease-out;
+	-moz-transition:
+		opacity 0.5s,
+		-moz-transform 0.7s ease-out;
+	-webkit-transition:
+		opacity 0.5s,
+		-webkit-transform 0.7s ease-out;
+}
+.imgholder:hover .outer2{
+	opacity:0.9;
+	filter: alpha(opacity = 90);
+	transform: scale(1,1) rotate(-10deg);
+	-ms-transform: scale(1,1) rotate(-10deg);
+	-moz-transform: scale(1,1) rotate(-10deg);
+	-webkit-transform: scale(1,1) rotate(-10deg);
+}
+/*малюнки  в кружочку кінець*/
+
+/*малюнки  в статті */
+
+.hover-image-scale {
+	 float: left;
+  margin: 0 15px 10px 0;
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  display: inline-block;
+  overflow: hidden; /* Ховаємо все за контуром */
+}
+.hover-image-scale img {
+  transition: 1s; /* час ефекту */
+  display: block;
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); /* Збільшення масштаб */
+}
+    /*малюнки  в статті кінець*/
+.photo {
+  width: 400px;
+  height: 350px;
+  overflow: hidden;
+}
+
+img {
+  transition: transform 0.25s;
+}
+
+.photo:hover img {
+  transform: scale(1.1);
+}
+/*малюнки прості в статті */
+.hover-image-scale {
+  display: inline-block;
+  overflow: hidden; /* Скрываем всё за контуром */
+}
+.hover-image-scale img {
+  transition: 1s; /* Время эффекта */
+  display: block;
+}
+.hover-image-scale img:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+
+/*малюнки прості в статті кінець*/
+/*форма запиту*/
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: auto;
+    padding: 6px 15px;
+    margin: 10px 5px;
+    font-size: 0.85em;
+    border-radius: 10px;
+    border: 3px double #527c82;
+    background: #71b9e8;
+    color: #0a1c22 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+}
+button {
+    text-decoration: none!important;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+  border-radius: 15px;
+  border: 3px double #527c82;
+    background: #71b9e8;
+    /*   color: #fff !important;  */
+ color: #0a1c22 !important;
+	font-size: 0.950em;
+  font-weight: bold;
+	text-transform:  uppercase;
+    transition: .2s ease-in-out;
+}
+button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -80px;
+    transform: skewX(-45deg);
+}
+button:hover {
+    background: #71b9e8;
+    /*   color: #fff !important;  */
+ color: #0a1c22 !important;
+  -webkit-box-shadow: 4px 8px 8px 1px rgba(7,  88,  148, 0.42);
+-moz-box-shadow: 4px 8px 8px 1px rgba(7,  88,  148, 0.42);
+box-shadow: 4px 8px 8px 1px rgba(7,  88,  148, 0.42);
+}
+button:hover:before {
+    left: 100%;
+    transition: .5s ease-in-out;
+}
+button:focus {
+    background: #71b9e8;
+    /*   color: #fff !important;  */
+ color: #0a1c22 !important;
+    outline: none;
+}
+
+/*кнопки  кінець*/
+
+
+a {
+    color: #008CBA;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.comment-item {
+    color: #6d6868;
+}
+/* кінець форми запиту*/

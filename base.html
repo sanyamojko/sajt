@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+      <meta charset="UTF-8">
+
+     <title> {% block title %}{% endblock %} </title>
+</head>
+
+<body>
+
+<header>
+  <img src=" {{ url_for('static', filename='images/gerb_L.png')  }}">{% block head %}{% endblock %}
+</header>
+{% block picture %}{% endblock %}
+<section>
+
+  <nav>
+      <div>
+    	<div class="imgholder">
+		<div class="outer1 circle"></div>
+		<div class="outer2 circle"></div>
+		<figure>
+			<a href="{{ url_for('index') }}"><img src=" {{ url_for('static', filename='images/golovna.jpg')  }}"></a>
+			<figcaption class="caption">Головна</figcaption>
+		</figure>
+	</div></div>
+    <div>
+    	<div class="imgholder">
+		<div class="outer1 circle"></div>
+		<div class="outer2 circle"></div>
+		<figure>
+			<a href="{{ url_for('st1') }}"><img src=" {{ url_for('static', filename='images/korpus.jpg')  }}"></a>
+			<figcaption class="caption">Навчальний корпус</figcaption>
+		</figure>
+	</div></div>
+     <div>
+    	<div class="imgholder">
+		<div class="outer1 circle"></div>
+		<div class="outer2 circle"></div>
+		<figure>
+			<a href="{{ url_for('st2') }}"><img src=" {{ url_for('static', filename='images/obshaga.jpg')  }}"></a>
+			<figcaption class="caption">Гуртожиток</figcaption>
+		</figure>
+	</div></div>
+             <div>
+    	<div class="imgholder">
+		<div class="outer1 circle"></div>
+		<div class="outer2 circle"></div>
+		<figure>
+			<a href="{{ url_for('st3') }}"><img src=" {{ url_for('static', filename='images/stolova.jpg')  }}"></a>
+			<figcaption class="caption">Їдальня</figcaption>
+		</figure>
+	</div></div>
+  </nav>
+
+  <article>
+
+{% block body %}{% endblock %}
+{% block content %}{% endblock %}
+  </article>
+</section>
+
+<footer>
+  <p>  <p>Курсовий проект розробив курсант ННІ-4-23-203 рядовий поліції МОЙКО
+ <br> ХАРКІВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ ВНУТРІШНІХ СПРАВ ННІ-4</p></p>
+</footer>
+</body>
+</html>
